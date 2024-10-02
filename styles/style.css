@@ -48,8 +48,7 @@ header {
 
 .section_title {
   line-height: 22px;
-  font-weight: var(--section-subtitle-weight);
-  font-variation-settings: var(--section-subtitle-weight);
+  font-variation-settings: "wght" var(--section-subtitle-weight);
   font-size: 18px;
   padding: 0 12px 5px 10px;
   border-bottom: 2px solid var(--accent-color);
@@ -138,7 +137,7 @@ button:focus {
   flex-direction: column;
   padding: 23px 25px 0 25px;
   gap: 27px;
-  font-weight: var(--section-article-weight);
+  font-variation-settings: "wght" var(--section-article-weight);
   border-top: 2px solid var(--accent-color);
 }
 
