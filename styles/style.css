@@ -4,6 +4,10 @@ body {
   font-variation-settings: "wght" 700;
   font-variation-settings: "wght" 785;
   font-variation-settings: "wght" 465;
+  min-inline-size: 375px;
+  max-inline-size: 700px;
+  margin: 0 auto;
+  block-size: 100%;
 }
 
 .page {
@@ -112,13 +116,6 @@ button:focus {
   top: 0;
   left: -22px;
   animation: pointer 0.5s infinite ease-in-out alternate;
-}
-
-body {
-  min-inline-size: 375px;
-  max-inline-size: 700px;
-  margin: 0 auto;
-  block-size: 100%;
 }
 
 .main_section_list {
