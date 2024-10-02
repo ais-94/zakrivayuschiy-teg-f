@@ -1,3 +1,11 @@
+body {
+  color-scheme: light dark;
+  font-variation-settings: "wght" 400;
+  font-variation-settings: "wght" 700;
+  font-variation-settings: "wght" 785;
+  font-variation-settings: "wght" 465;
+}
+
 .page {
   inline-size: 100%;
   min-block-size: 100%;
@@ -163,6 +171,13 @@ body {
   right: 25px;
   font-size: 14px;
   z-index: 1;
+}
+
+@supports ((-webkit-text-stroke: 1px var(--lable-color-decoration))) {
+  p {
+    -webkit-text-stroke: 1px var(--lable-color-decoration);
+    text-shadow: none;
+  }
 }
 
 @media (width <= 376px) {
