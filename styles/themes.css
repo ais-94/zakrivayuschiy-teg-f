@@ -4,3 +4,76 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-light {
+  /* Переменные светлой темы */
+  --cover-gradient: linear-gradient(
+    rgba(231, 231, 231, 0.8),
+    rgba(231, 231, 231, 1) 10%,
+    rgba(26, 26, 26, 0.5) 100%
+  );
+  --background-color: rgba(255, 255, 255, 1);
+  --background-gradient-color: #d3d3d3;
+  --accent-color: rgba(0, 0, 0, 1);
+  --main-text-color: rgba(0, 0, 0, 1);
+  --button-text-color: rgb(255, 255, 255);
+  --section-lable-color: rgba(0, 0, 0, 1);
+  --lable-color-decoration: rgba(255, 255, 255, 1);
+  --floppy-hover-color: rgba(255, 255, 255, 1);
+  --section-subtitle-weight: 700;
+  --section-article-weight: 400;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Дублируем переменные светлой темы */
+    --cover-gradient: linear-gradient(
+      rgba(231, 231, 231, 0.6) 0.01%,
+      rgba(26, 26, 26, 0.6)
+    );
+    --background-color: rgba(255, 255, 255, 1);
+    --background-gradient-color: #d3d3d3;
+    --accent-color: rgba(0, 0, 0, 1);
+    --main-text-color: rgba(0, 0, 0, 1);
+    --button-text-color: rgb(255, 255, 255);
+    --section-lable-color: rgba(0, 0, 0, 1);
+    --lable-color-decoration: rgba(255, 255, 255, 1);
+    --floppy-hover-color: rgba(255, 255, 255, 1);
+    --section-subtitle-weight: 700;
+    --section-article-weight: 400;
+  }
+}
+
+:root.theme_dark {
+  /* Переменные светлой темы */
+  --cover-gradient: linear-gradient(rgba(0, 127, 12, 0.6), rgba(0, 67, 6, 0.6));
+  --background-color: rgba(0, 0, 0, 1);
+  --background-gradient-color: #000;
+  --accent-color: rgba(0, 204, 20, 1);
+  --main-text-color: var(--accent-color);
+  --button-text-color: rgba(0, 204, 20, 1);
+  --section-lable-color: rgba(0, 204, 20, 1);
+  --lable-color-decoration: rgba(0, 0, 0, 1);
+  --floppy-hover-color: rgba(0, 0, 0, 1);
+  --section-subtitle-weight: 785;
+  --section-article-weight: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cover-gradient: linear-gradient(
+      rgba(0, 127, 12, 0.3),
+      rgba(0, 67, 6, 0.3)
+    );
+    --background-color: rgba(0, 0, 0, 1);
+    --background-gradient-color: #000;
+    --accent-color: rgba(0, 204, 20, 1);
+    --main-text-color: var(--accent-color);
+    --button-text-color: rgba(0, 204, 20, 1);
+    --section-lable-color: rgba(0, 204, 20, 1);
+    --lable-color-decoration: rgba(0, 0, 0, 1);
+    --floppy-hover-color: rgba(0, 0, 0, 1);
+    --section-subtitle-weight: 785;
+    --section-article-weight: 700;
+  }
+}

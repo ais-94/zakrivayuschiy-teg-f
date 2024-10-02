@@ -1,1 +1,22 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --font-family-main: "Inter", "Arial", sans-serif;
+  --font-family-decoration: "Press Start 2P", system-ui, "Arial Black",
+    sans-serif;
+  --background-image: var(--cover-gradient),
+    repeating-linear-gradient(
+      transparent,
+      transparent 2px,
+      var(--background-gradient-color) 2px,
+      var(--background-gradient-color) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--accent-color),
+      var(--accent-color) 2px,
+      var(--background-gradient-color) 2px,
+      var(--background-gradient-color) 4px
+    );
+  --fill-color-icon-heart: rgba(255, 0, 0, 1);
+}

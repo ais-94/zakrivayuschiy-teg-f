@@ -1,20 +1,173 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
-
-*/
-
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+  inline-size: 100%;
+  min-block-size: 100%;
+  background-image: var(--background-image);
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--main-text-color);
+  font-family: var(--font-family-main);
+}
+
+header {
+  font-family: var(--font-family-decoration);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 136px 121px 25px 121px;
+  border: 1px solid var(--accent-color);
+  background-color: var(--background-color);
+  margin: 102px 0 102px 0;
+}
+
+@media (width <= 376px) {
+  header {
+    padding: 122px 16px 25px 16px;
+  }
+}
+
+.header__title {
+  font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
+  text-transform: uppercase;
+}
+
+.header__subtitle {
+  font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.section_title {
+  line-height: 22px;
+  font-weight: var(--section-subtitle-weight);
+  font-size: 18px;
+  padding: 0 12px 5px 10px;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.theme-menu__list {
+  margin-top: 2px;
+  margin-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.theme-menu__button {
+  background-color: transparent;
+  border: none;
+  transition: 0.3s ease;
+  position: relative;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.theme-menu__button::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  bottom: -2px;
+}
+
+.theme-menu__button:focus-visible::before {
+  background: var(--accent-color);
+  transition: 0.8s ease;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.theme-menu__button:disabled::before {
+  font-family: var(--font-family-decoration);
+  font-size: 14px;
+  content: "▶";
+  position: absolute;
+  top: 0;
+  left: -22px;
+  animation: pointer 0.5s infinite ease-in-out alternate;
+}
+
+body {
+  min-inline-size: 375px;
+  max-inline-size: 700px;
+  margin: 0 auto;
+  block-size: 100%;
+}
+
+.main_section_list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.section {
+  border: 2px solid var(--accent-color);
+  background-color: var(--background-color);
+  font-size: 18px;
+  line-height: 21px;
+  padding: 5px 0 25px 0;
+  inline-size: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--main-text-color);
+}
+
+.section_article {
+  display: flex;
+  flex-direction: column;
+  padding: 23px 25px 0 25px;
+  gap: 27px;
+  font-weight: var(--section-article-weight);
+  border-top: 2px solid var(--accent-color);
+}
+
+@media (width <= 376px) {
+  .section_article {
+    padding-top: 20px;
+    padding-right: 28px;
+  }
+}
+
+.section_lable {
+  position: absolute;
+  color: var(--section-lable-color);
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+  font-family: var(--font-family-decoration);
+  text-shadow: 0.5px 0.5px 0 var(--lable-color-decoration),
+    0.5px -0.5px var(--lable-color-decoration),
+    -0.5px 0.5px 0 var(--lable-color-decoration),
+    -0.5px -0.5px 0 var(--lable-color-decoration);
+
+  text-transform: uppercase;
+  top: 27px;
+  right: 25px;
+  font-size: 14px;
+  z-index: 1;
+}
+
+@media (width <= 376px) {
+  .section_lable {
+    top: 20px;
+    right: 13px;
+  }
 }
