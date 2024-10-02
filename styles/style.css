@@ -1,9 +1,5 @@
 body {
   color-scheme: light dark;
-  font-variation-settings: "wght" 400;
-  font-variation-settings: "wght" 700;
-  font-variation-settings: "wght" 785;
-  font-variation-settings: "wght" 465;
   min-inline-size: 375px;
   max-inline-size: 700px;
   margin: 0 auto;
@@ -53,6 +49,7 @@ header {
 .section_title {
   line-height: 22px;
   font-weight: var(--section-subtitle-weight);
+  font-variation-settings: var(--section-subtitle-weight);
   font-size: 18px;
   padding: 0 12px 5px 10px;
   border-bottom: 2px solid var(--accent-color);
@@ -171,7 +168,7 @@ button:focus {
 }
 
 @supports ((-webkit-text-stroke: 1px var(--lable-color-decoration))) {
-  p {
+  .section_lable {
     -webkit-text-stroke: 1px var(--lable-color-decoration);
     text-shadow: none;
   }
