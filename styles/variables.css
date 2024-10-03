@@ -18,4 +18,5 @@
     ),
     var(--cover-gradient);
   --fill-color-icon-heart: #ff0000;
+  --dialog-background-color: rgb(0 0 0 / 0.75);
 }

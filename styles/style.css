@@ -198,7 +198,7 @@ button:focus {
   padding: 30px 30px 28px 30px;
   block-size: min-content;
   max-inline-size: 353px;
-  background-color: transparent;
+  background-color: var(--background-color);
   color: var(--accent-color);
   font-family: var(--font-family-decoration);
   text-transform: uppercase;
@@ -215,6 +215,10 @@ button:focus {
   line-height: 21px;
   font-weight: 400;
   align-self: flex-start;
+}
+
+dialog::backdrop {
+  background-color: var(--dialog-background-color);
 }
 
 dialog:not([open]) {
