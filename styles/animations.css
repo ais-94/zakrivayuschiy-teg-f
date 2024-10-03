@@ -31,6 +31,10 @@
   50% {
     scale: 1.5;
   }
+
+  100% {
+    scale: 1;
+  }
 }
 
 @keyframes sparks {

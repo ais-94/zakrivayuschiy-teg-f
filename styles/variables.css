@@ -2,10 +2,8 @@
 
 :root {
   --font-family-main: "Inter", "Arial", sans-serif;
-  --font-family-decoration: "Press Start 2P", system-ui, "Arial Black",
-    sans-serif;
-  --background-image: var(--cover-gradient),
-    repeating-linear-gradient(
+  --font-family-decoration: "Press Start 2P", "Arial Black", fantasy, system-ui;
+  --background-image: repeating-linear-gradient(
       transparent,
       transparent 2px,
       var(--background-gradient-color) 2px,
@@ -13,10 +11,11 @@
     ),
     repeating-linear-gradient(
       90deg,
-      var(--accent-color),
-      var(--accent-color) 2px,
+      transparent,
+      transparent 2px,
       var(--background-gradient-color) 2px,
       var(--background-gradient-color) 4px
-    );
-  --fill-color-icon-heart: rgba(255, 0, 0, 1);
+    ),
+    var(--cover-gradient);
+  --fill-color-icon-heart: #ff0000;
 }

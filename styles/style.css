@@ -36,8 +36,16 @@ header {
 }
 
 .header__title {
-  font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
+  text-decoration: none;
   text-transform: uppercase;
+}
+
+.header__title_text {
+  font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
+}
+
+.header__title:focus {
+  outline: none;
 }
 
 .header__subtitle {
@@ -75,6 +83,9 @@ header {
 
 .theme-menu__button:hover {
   opacity: 0.6;
+}
+
+button:hover {
   cursor: pointer;
 }
 
@@ -94,14 +105,12 @@ button:focus {
   height: 2px;
   background: var(--accent-color);
   bottom: -2px;
+  transition: 0.3s ease;
 }
 
 .theme-menu__button:focus-visible::before {
-  background: var(--accent-color);
-  transition: 0.8s ease;
+  transition: 0.3s ease;
   width: 100%;
-  outline: none;
-  border: none;
 }
 
 .theme-menu__button:disabled::before {
@@ -117,7 +126,7 @@ button:focus {
 .main_section_list {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 51px;
 }
 
 .section {
@@ -135,7 +144,7 @@ button:focus {
 .section_article {
   display: flex;
   flex-direction: column;
-  padding: 23px 25px 0 25px;
+  padding: 23px 25.5px 0 25px;
   gap: 27px;
   font-variation-settings: "wght" var(--section-article-weight);
   border-top: 2px solid var(--accent-color);
@@ -178,4 +187,46 @@ button:focus {
     top: 20px;
     right: 13px;
   }
+}
+
+.dialog {
+  transition: opacity 0.3s ease-in-out;
+  position: fixed;
+  inset: 0;
+  display: grid;
+  gap: 30px;
+  padding: 30px 30px 28px 30px;
+  block-size: min-content;
+  max-inline-size: 353px;
+  background-color: transparent;
+  color: var(--accent-color);
+  font-family: var(--font-family-decoration);
+  text-transform: uppercase;
+  border: 2px solid var(--accent-color);
+  align-items: center;
+  justify-items: stretch;
+}
+
+.dialod_text {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 20px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  align-self: flex-start;
+}
+
+dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.close {
+  position: relative;
+  padding: 10.5px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: 0.3s linear;
 }
