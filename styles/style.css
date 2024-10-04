@@ -108,6 +108,10 @@ button:focus {
   transition: 0.3s ease;
 }
 
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+}
+
 .theme-menu__button:focus-visible::before {
   width: 100%;
 }
