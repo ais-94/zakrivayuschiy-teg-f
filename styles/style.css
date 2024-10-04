@@ -109,7 +109,6 @@ button:focus {
 }
 
 .theme-menu__button:focus-visible::before {
-  transition: 0.3s ease;
   width: 100%;
 }
 

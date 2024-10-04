@@ -22,7 +22,7 @@
     <body class="page">
         <header class="header">
             <!--<h1 class="header__title">&lt;/HTML&gt;</h1>-->
-            <a href="#0" class="header__title"><p class="header__title_text">&lt;/HTML&gt;</p></a>
+            <a href="#0" class="header__title header__title_text">&lt;/HTML&gt;</a>
             <h1 class="header__subtitle">закрывающий тег</h1>
             <nav class="theme-menu header__theme-menu">
                 <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
@@ -340,7 +340,7 @@
                 <span class="button__text">Сохранить на память</span>
             </button>
 
-            <dialog id="dialog-id" class="dialog" method="dialog">
+            <dialog id="dialog-id" class="dialog">
                 <div class="dialod_text">
                     <svg viewBox="0 0 21 21" class="floppy_dialog_conteiner">
                         <use href="./svg/floppy5.svg#floppy" />
@@ -348,7 +348,7 @@
 
                     <p>Вставьте дискету, чтобы продолжить</p>
                 </div>
-                <form>
+                <form method="dialog">
                     <button class="close button_card" type="button" onclick="window['dialog-id'].close();">
                         <span class="button__text">ок</span>
                     </button>

@@ -39,7 +39,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --cover-gradient: linear-gradient(#007f0c, #004306);
+    --cover-gradient: linear-gradient(#007f0c 0%, #004306 100%);
     --background-color: rgba(0, 0, 0, 1);
     --background-gradient-color: #000;
     --accent-color: rgba(0, 204, 20, 1);
